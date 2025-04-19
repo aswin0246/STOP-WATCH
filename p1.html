@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="p1.css">
+    <title>Document</title>
+</head>
+<body>  
+    <div class="container">
+        <h1>Stopwatch / Countdown</h1>
+        <label class="switch">
+          <input type="checkbox" id="modeSwitch" onchange="toggleMode()">
+          <span class="slider"></span>
+        </label>
+        <span class="mode-label">Countdown</span>
+    
+        <div id="countdown-inputs" style="display:none;">
+          <input type="number" id="countdownHrs" placeholder="HH" min="0">
+          <input type="number" id="countdownMin" placeholder="MM" min="0">
+          <input type="number" id="countdownSec" placeholder="SS" min="0">
+        </div>
+    
+        <div id="display">00:00:00:<span class="ms-part">00</span></div>
+        <div class="buttons">
+          <button onclick="startTimer()">Start</button>
+          <button onclick="stopTimer()">Stop</button>
+          <button onclick="lapTime()">Lap</button>
+          <button onclick="resetTimer()">Reset</button>
+        </div>
+    
+        <table id="timeTable">
+          <thead>
+            <tr><th>#</th><th>Time</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    
+    
+      <script src="script.js"></script>
+    
+</body>
+</html>
